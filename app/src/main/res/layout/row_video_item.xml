@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        apps:layout_constraintTop_toTopOf="@id/video_player"
+        apps:layout_constraintBottom_toBottomOf="@id/video_player"
+        apps:layout_constraintStart_toStartOf="@id/video_player"
+        apps:layout_constraintEnd_toEndOf="@id/video_player"
+
+        />
+    <com.alphamovie.lib.AlphaMovieView
+        android:id="@+id/video_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        apps:alphaColor="#00ff00"
+        apps:accuracy="0.4"
+        apps:layout_constraintTop_toTopOf="parent"
+        apps:layout_constraintBottom_toBottomOf="parent"
+        apps:layout_constraintStart_toStartOf="parent"
+        apps:layout_constraintEnd_toEndOf="parent"
+        />
+
+</android.support.constraint.ConstraintLayout>
