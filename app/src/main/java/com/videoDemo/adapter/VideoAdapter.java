@@ -65,6 +65,12 @@ public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     }
 
+    @Override
+    public void onViewRecycled(@NonNull RecyclerView.ViewHolder viewHolder) {
+        ViewHolder holder = (ViewHolder) viewHolder;
+        holder.video_player.stop();
+        super.onViewRecycled(viewHolder);
+    }
 
     @Override
     public int getItemCount() {
